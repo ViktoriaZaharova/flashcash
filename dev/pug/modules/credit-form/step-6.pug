@@ -1,0 +1,46 @@
+h2 Документы
+.document-upload-step.mb-2em
+	.document-upload-step__item.display-none
+		.form-group.input-effect
+			input(type="text", placeholder="", name="document-file-name[]")
+			label Введите название
+			span.focus-border
+			span.error-text Укажите название
+		.input
+			.input-file
+				label.f-medium(for="") Выбрать файл
+				input.fast-file(type="file" name="document-file[]" required="required")
+			.state.f-medium файл не выбран
+		.remove-document
+			i.icon-fc-trash
+	form(action="" id="document-upload")
+		.document-upload-step__item
+			.form-group.input-effect
+				input(type="text", placeholder="", name="document-file-name[]")
+				label Введите название
+				span.focus-border
+				span.error-text Укажите название
+			.input
+				.input-file
+					label.f-medium(for="type-file-1") Выбрать файл
+					input.fast-file#type-file-1(type="file" name="document-file[]" required="required")
+				.state.f-medium файл не выбран
+			.remove-document
+				i.icon-fc-trash
+		.document-upload-step__item
+			.form-group.input-effect
+				input(type="text", placeholder="", name="document-file-name[]")
+				label Введите название
+				span.focus-border
+				span.error-text Укажите название
+			.input
+				.input-file
+					label.f-medium(for="type-file-2") Выбрать файл
+					input.fast-file#type-file-2(type="file" name="document-file[]" required="required")
+				.state.f-medium файл не выбран
+			.remove-document
+				i.icon-fc-trash
+		.text-right
+			button.btn-main.btn-blue.btn-small#add-document-upload-step__item(type="button")
+				i.fas.fa-plus-circle
+				| Добавить документ

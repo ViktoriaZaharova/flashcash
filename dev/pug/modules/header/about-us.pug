@@ -1,0 +1,138 @@
+.about-us-menu#about-us-menu
+	.about-close &times;
+	.container
+		.about-us-menu__inner
+			.inner
+				.links
+					ul.menu
+						li
+							a.tab-link.active(href="#about-tab") О нас
+						li
+							a.tab-link(href="#contact-tab") Контакты
+						li
+							a.tab-link(href="#stocks-tab") Акции
+						li
+							a.tab-link(href="#news-tab") Новости
+						li
+							a(href="/about.html") О компании
+						li
+							a(href="/question-answer.html") Вопрос-ответ
+				.content
+					a.accordion-link.active(href="#about-tab")
+						span О нас
+						i.icon-fc-angle-down(aria-hidden="true")
+					#about-tab.tab-content(style="display: block;")
+						h3 О нас
+						p FlashCash - продукт, созданный для того, чтобы Вы получили деньги тогда, когда они наиболее Вам необходимы. Мы постоянно думаем о том, чтобы сделать процесс получения кредита еще более удобным и безопасным для Вас. При этом, наше главное правило – помощь должна прийти молниеносно, тогда, когда Вы в ней действительно нуждаетесь. Наша главная ценность – наши клиенты, а потому мы работаем честно, прозрачно и открыто. Мы не звоним Вашим близким или на работу, не требуем предоставления копий документов и гарантируем защиту Ваших персональных данных.
+						p FlashCash – первый сервис по предоставлению молниеносных кредитов в Украине.
+						a.btn-main.btn-with-border.btn-medium(href="#") Подробнее
+					a.accordion-link(href="#contact-tab")
+						span Контакты
+						i.icon-fc-angle-down(aria-hidden="true")
+					#contact-tab.tab-content
+						.flex-1em.space-between
+							.col
+								.about-us-menu__contacts.mb-1em
+									.item
+										.descr связаться с нами
+										.info
+											div 0 (800) 70-50-60
+											div 0 (800) 70-50-60
+											div 0 (800) 70-50-60
+									.item
+										.descr общие вопросы
+										.info flashcash@gmail.com
+									.item
+										.descr техническая поддержка
+										.info flashcash@gmail.com
+									.item
+										.descr график работы горячей линии
+										.info
+											| пн-пт: 9:00-18:00
+											br
+											| сб-вс: 10:00-17:00
+							.col
+								.header-contact-form
+									h3 Написать в компанию
+									p напишите нам, будем рады ответить на любые ваши вопросы
+									form(action="")
+										.form-container
+											.form-group
+												label Вид обращения
+												select(required="required")
+													option(value="") поддержка клиентов
+													option(value="") поддержка клиентов
+													option(value="") поддержка клиентов
+											.form-group
+												label Имя
+												input(type="text" required="required")
+										.form-container
+											.form-group
+												label Телефон
+												input(type="text" required="required")
+											.form-group
+												label Email
+												input(type="text" required="required")
+										.form-container.w-100
+											.form-group
+												label Сообщение
+												textarea(rows="3" required="required")
+										.text-center.mt-1em
+											button.btn-main.btn-orange(type="submit") Отправить
+					a.accordion-link(href="#stocks-tab")
+						span Акции
+						i.icon-fc-angle-down(aria-hidden="true")
+					#stocks-tab.tab-content
+						.flex-1em.space-between
+							.col
+								.about-us-menu__contacts.mb-1em
+									.item
+										.descr связаться с нами
+										.info 0 (800) 70-50-60
+									.item
+										.descr общие вопросы
+										.info flashcash@gmail.com
+									.item
+										.descr техническая поддержка
+										.info flashcash@gmail.com
+									.item
+										.descr график работы горячей линии
+										.info
+											| пн-пт: 9:00-18:00
+											br
+											| сб-вс: 10:00-17:00
+					a.accordion-link(href="#news-tab")
+						span Новости
+						i.icon-fc-angle-down(aria-hidden="true")
+					#news-tab.tab-content
+						a.second-menu(href="#") Ссылка
+						a.second-menu(href="#") Ссылка
+						a.second-menu(href="#") Ссылка
+					a.menu-link(href="/about.html") О компании
+					a.menu-link(href="/question-answer.html") Вопрос-ответ
+			.menu-carousel.owl-carousel#menu-carousel
+				.item
+					a(href="#")
+						.image
+							img(src="./static/images/png/adult-antioxidant-beach-1332194_MYAMCsy.jpg", alt="")
+						.text Акция "Приведи друга" получи 100 грн на карту
+				.item
+					a(href="#")
+						.image
+							img(src="./static/images/png/adult-antioxidant-beach-1332194_MYAMCsy.jpg", alt="")
+						.text Акция "Отдых с Флеш-Кеш"
+				.item
+					a(href="#")
+						.image
+							img(src="./static/images/png/adult-antioxidant-beach-1332194_MYAMCsy.jpg", alt="")
+						.text Акция "Приведи друга" получи 100 грн на карту
+				.item
+					a(href="#")
+						.image
+							img(src="./static/images/png/adult-antioxidant-beach-1332194_MYAMCsy.jpg", alt="")
+						.text Акция "Отдых с Флеш-Кеш"
+				.item
+					a(href="#")
+						.image
+							img(src="./static/images/png/adult-antioxidant-beach-1332194_MYAMCsy.jpg", alt="")
+						.text Акция "Приведи друга" получи 100 грн на карту

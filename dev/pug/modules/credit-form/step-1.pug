@@ -1,0 +1,211 @@
+.more-chance
+	p.semibold.size-1_1em.text-center.mb-1em Чтобы получить больше шансов на одобрение кредита,
+		br
+		| вы можете подключить ваши аккаунты:
+	.flex-1em.child-col-sm-6.child-col-md-3.child-col-xs-12
+		- for (var x = 0; x < 4; x++)
+			.col.text-center.pb-1em
+				.image.mb-1em
+					img(src="./static/images/png/facebook.png", alt="")
+				p.size-0_7em Социальная информация повышает вероятность одобрения заявки
+form#first-step( action="/credit-form.html")
+	h2 Условия заявки
+	.two-columns
+		.column
+			.form-group.input-effect
+				input(type="number", placeholder="")
+				label Сумма кредита, грн
+				span.focus-border
+				span.error-text Заполните поле
+		.column
+			.form-calendar-container
+				.form-group.input-effect
+					input#days-count(type="number", placeholder="", value="15")
+					label Срок кредита, грн
+					span.focus-border
+					span.error-text Заполните поле
+				.calendar#form-daterange
+					input(type="text" name="daterange" disabled="disabled")
+					.icon
+						i.far.fa-calendar-alt
+	.two-columns
+		.column
+			h2 Личные данные
+			.form-group.input-effect.error
+				input(type="text", placeholder="")
+				label Имя
+				span.focus-border
+				span.error-text Заполните поле
+			.form-group.input-effect
+				input(type="text", placeholder="")
+				label Фамилия
+				span.focus-border
+				span.error-text Заполните поле
+			.form-group.input-effect
+				input(type="text", placeholder="")
+				label Отчество
+				span.focus-border
+				span.error-text Заполните поле
+			div.mb-10 День вашего рождения
+			.form-group.error
+				.select
+					select
+						option(disabled selected value) Дата
+						option 1
+						option 2
+					.select__arrow
+						i.icon-fc-angle-down
+				.select
+					select
+						option(disabled selected value) Месяц
+						option 1
+						option 2
+					.select__arrow
+						i.icon-fc-angle-down
+				.select
+					select
+						option(disabled selected value) Год
+						option 1
+						option 2
+					.select__arrow
+						i.icon-fc-angle-down
+				span.error-text Заполните данные
+			.form-group.error
+				span(style="margin-right: 15px") Ваш пол:
+				label.control.control--radio мужчина
+					input(type="radio" name="radio" checked="checked")
+					.control__indicator
+				label.control.control--radio женщина
+					input(type="radio" name="radio")
+					.control__indicator
+				span.error-text Выберите
+			.form-group.input-effect
+				input(type="text", placeholder="")
+				label Телефон
+				span.focus-border
+				span.error-text Заполните поле
+		.column
+			h2 Паспортные данные
+			.mb-2_3em.pt-0_5em
+				label.control.control--radio Паспорт
+					input(type="radio" name="document_type" checked="checked" value="pas")
+					.control__indicator
+				label.control.control--radio ID карта
+					input(type="radio" name="document_type" value="id")
+					.control__indicator
+			.pass-container(data-type="pas")
+				.passport-data.mb-10
+					span.mr-10 Паспортные данные
+					.form-group.inline-input.input-effect.mr-10
+						input(type="text", placeholder="")
+						label Серия
+						span.focus-border
+						span.error-text Заполните
+					.form-group.inline-input.input-effect
+						input(type="text", placeholder="")
+						label Номер
+						span.focus-border
+						span.error-text Заполните
+				.form-group.input-effect
+					input(type="text", placeholder="")
+					label Кем выдан
+					span.focus-border
+					span.error-text Заполните поле
+				.form-group.input-effect
+					input(type="text", placeholder="")
+					label ИНН
+					span.focus-border
+					span.error-text Заполните поле
+				div.mb-10 Дата выдачи паспорта
+				.form-group
+					.select
+						select
+							option(disabled selected value) Дата
+							option 1
+							option 2
+						.select__arrow
+							i.icon-fc-angle-down
+					.select
+						select
+							option(disabled selected value) Месяц
+							option 1
+							option 2
+						.select__arrow
+							i.icon-fc-angle-down
+					.select
+						select
+							option(disabled selected value) Год
+							option 1
+							option 2
+						.select__arrow
+							i.icon-fc-angle-down
+					span.error-text Укажите данные
+			.id-container.display-none(data-type="id")
+				.form-group.input-effect
+					input(type="text", placeholder="")
+					label Номер записи ID
+					span.focus-border
+					span.error-text Заполните поле
+				.form-group.input-effect
+					input(type="text", placeholder="")
+					label Номер ID
+					span.focus-border
+					span.error-text Заполните поле
+				.form-group.input-effect
+					input(type="text", placeholder="")
+					label Кем выдан ID
+					span.focus-border
+					span.error-text Заполните поле
+				div.mb-10 ID действителен до
+				.form-group
+					.select
+						select
+							option(disabled selected value) Дата
+							option 1
+							option 2
+						.select__arrow
+							i.icon-fc-angle-down
+					.select
+						select
+							option(disabled selected value) Месяц
+							option 1
+							option 2
+						.select__arrow
+							i.icon-fc-angle-down
+					.select
+						select
+							option(disabled selected value) Год
+							option 1
+							option 2
+						.select__arrow
+							i.icon-fc-angle-down
+					span.error-text Укажите данные
+	.form-group.form-group__checkbox.error
+		label.control.control--checkbox.decoration-underline
+			a(href="#") Направляю сообщение Обществу о принятии условий договора на использование аналога собственноручной подписи
+			input(type="checkbox")
+			.control__indicator
+		span.error-text Отметьте
+	.form-group.form-group__checkbox
+		label.control.control--checkbox.decoration-underline
+			a(href="#") Предоставляю разрешение на проверку информации относительно Клиента в Бюро кредитных историй
+			input(type="checkbox")
+			.control__indicator
+	.form-group.form-group__checkbox
+		label.control.control--checkbox.decoration-underline
+			a(href="#") Предоставляю разрешение на проверку, обработку и передачу персональных данных
+			input(type="checkbox")
+			.control__indicator
+	.form-group.form-group__checkbox
+		label.control.control--checkbox.decoration-underline
+			a(href="#") Акцептую Публичный договор-оферту по добровольному страхованию ответственности заемщика за непогашение кредита
+			input(type="checkbox")
+			.control__indicator
+	.form-group.form-group__checkbox
+		label.control.control--checkbox.decoration-underline#get-geo
+			a(href="#" target="_blank") Разрешить доступ к местоположению
+			input(type="checkbox")
+			.control__indicator
+		span.error-text
+		input#latitude(type="hidden" name="latitude")
+		input#longitude(type="hidden" name="longitude")

@@ -1,0 +1,60 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Кредиты'
+	- var pageClass = ''
+	- var headName = 'Кредиты'
+
+block content
+	.cards.table-container
+		table
+			thead
+				tr
+					td Номер карты
+					td.text-center Статус
+					td
+			tbody
+				tr
+					td
+						label.control.control--radio
+							.card-icon
+								i.icon-fc-card(aria-hidden="true")
+							| 53 **** 6780
+							input(type="radio" name="radio" checked="checked")
+							.control__indicator
+					td.text-center
+						.active Активирована
+					td
+						.remove-icon
+							i.icon-fc-trash(aria-hidden="true")
+				tr
+					td
+						label.control.control--radio
+							.card-icon
+								i.icon-fc-card(aria-hidden="true")
+							| 53 **** 6780
+							input(type="radio" name="radio")
+							.control__indicator
+					td.text-center
+						.active Активирована
+					td
+						.remove-icon
+							i.icon-fc-trash(aria-hidden="true")
+				tr
+					td
+						label.control.control--radio
+							.card-icon
+								i.icon-fc-card(aria-hidden="true")
+							| 53 **** 6780
+							input(type="radio" name="radio")
+							.control__indicator
+					td.text-center
+						.inactive Неактивна
+					td
+						.remove-icon
+							i.icon-fc-trash(aria-hidden="true")
+	.actions.mt-4em.flex.flex-end
+		button.btn-main.btn-blue.btn-medium.mr-1em(type="button")
+			i.icon-fc-add-card(aria-hidden="true")
+			| Добавить карту
+		button.btn-main.btn-orange(type="button") Оплатить

@@ -1,0 +1,25 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Мои социальные сети'
+	- var pageClass = ''
+	- var headName = 'Мои социальные сети'
+	- var currentPersonalMenu = 4
+
+block content
+	.user-name
+		| Имя Фамилия Отчество
+		i#edit-data.icon-fc-pencil(aria-hidden="true")
+	.user-id ID 106908
+	p.size-0_9em.f-medium.mt-1_5em.mb-1_5em Пожалуйста, дайте ссылки на социальные сети, где Вы зарегестрированы. Это увеличивает Ваши шансы в дальнейшем на принятие позитивного решения при получении кредита. 
+	.social-links
+		.social-links-item.form-group.input-effect
+			input(type="text" value="vk.com/12356789" placeholder="Введите ссылку")
+			.remove &times;
+		.social-links-item.form-group.input-effect
+			input(type="text" placeholder="Введите ссылку")
+			.remove &times;
+		.add-link.size-0_9em Добавить ссылку на социальную сеть
+	.actions.text-right.mt-4em
+		button.btn-main.btn-orange.btn-with-border.mr-1em(type="button") Отменить
+		button.btn-main.btn-orange(type="button") Сохранить

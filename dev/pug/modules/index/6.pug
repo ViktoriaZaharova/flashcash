@@ -1,0 +1,17 @@
+.main-section.reviews-section
+	.container
+		h2 Отзывы о нас на Facebook
+		.pr-6em.pl-6em.reviews-inner
+			.carousel-arrow.carousel-prev
+				i.icon-fc-angle-left(aria-hidden="true")
+			.carousel-arrow.carousel-next
+				i.icon-fc-angle-right(aria-hidden="true")
+			.carousel#reviews
+				- for (var i = 0; i < 10; ++i)
+					.carousel-item
+						.item-inner
+							.image
+								img(src="./static/images/png/photo.png", alt="One")
+							.comment
+								h5 Сергей  Сергеевич
+								p Вы можете погасить Ваш кредит онлайн не выходя из дома. Просто перейдите в свой личный кабинет и отдадите займ банковской картой. Все просто!

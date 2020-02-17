@@ -1,0 +1,32 @@
+extends template/main
+
+block variables
+	- var title = 'Акции'
+	- var pageClass = ''
+
+block content
+	- var headName = 'Акции'
+	include ./modules/head-with-image
+	.all-stocks-container
+		.container
+			.flex-2em.child-col-sm-6.child-col-md-4.child-col-xs-12
+				- for (var x = 0; x < 2; x++)
+					.col
+						.all-stocks-item
+							a.img(href="/stock-item.html")
+								img(src="./static/images/png/im_1.png" alt="")
+							a.descr(href="/stock-item.html") Акция “Комиссия 0% за первый месяц займа”
+							.date 04.06.2019
+					.col
+						.all-stocks-item
+							a.img(href="/stock-item.html")
+								img(src="./static/images/png/im_2.png" alt="")
+							a.descr(href="/stock-item.html") Новая акция “ - 50 % на повторный кредит”. Успей взять редит!
+							.date 04.06.2019
+					.col
+						.all-stocks-item
+							a.img(href="/stock-item.html")
+								img(src="./static/images/png/im_3.png" alt="")
+							a.descr(href="/stock-item.html") Розыгрыш 1 000 000 грн, а также 1 000 грн ежедневно! Успей принять участие.
+							.date 04.06.2019
+			include ./modules/pagination

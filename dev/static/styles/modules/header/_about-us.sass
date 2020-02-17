@@ -1,0 +1,174 @@
+.about-us-menu
+	position: absolute
+	left: 0
+	right: 0
+	top: 100%
+	background: $light-blue2
+	z-index: 20
+	box-shadow: 0px 16px 9px rgba(0,0,0,0.28)
+	display: none
+	.about-close
+		position: absolute
+		width: 60px
+		height: 60px
+		font-size: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		right: 0
+		top: 0
+		display: none
+		z-index: 1
+	&.visible
+		display: block
+	.about-us-menu__inner
+		padding: 2.6em 5em
+		.inner
+			display: flex
+			.links
+				width: 25%
+				flex-basis: 25%
+				border-right: 1px solid #3f505a
+			.content
+				width: 73%
+				flex-basis: 73%
+				padding-left: 1em
+				.second-menu
+					display: block
+					margin-bottom: 1em
+					font-size: 1.25em
+					color: #000000
+	.menu
+		li
+			a
+				font-size: 1.25em
+				color: #000000
+				font-family: $montserrat-medium
+				display: block
+				padding: 0.5em
+				&:hover
+					color: $orange
+					text-decoration: none
+					background: #ffffff
+				&.active
+					background: #3f505a
+					color: #ffffff
+.about-us-menu__contacts
+	.item
+		&:not(:last-child)
+			margin-bottom: 1em
+		.descr
+			font-size: 0.9em
+			margin-bottom: 0.2em
+		.info
+			font-size: 1.25em
+			color: $dark-blue
+			font-family: $montserrat-medium
+
+.header-contact-form
+	h3
+		font-size: 1.25em
+		color: $dark-blue
+		font-family: $montserrat-medium
+		margin-bottom: 0.2em
+	p
+		font-size: .8em
+		margin-bottom: 1.3em
+	.form-container
+		display: flex
+		margin-right: -0.5em
+		margin-left: -0.5em
+		> div
+			flex-basis: 50%
+			width: 50%
+			padding: 0 0.5em
+			margin: 0 0 5px
+			label
+				margin-bottom: 5px
+				display: block
+				font-size: .8em
+			input,
+			textarea,
+			select
+				font-family: $montserrat-medium
+				font-size: .8em
+		&.w-100
+			> div
+				flex-basis: 100%
+				width: 100%
+
+.about-us-menu
+	a.tab-link,
+	a.accordion-link
+		color: #000000
+		&.active
+			color: $orange
+			cursor: default
+	.menu-link
+		display: none
+		font-size: 1.25em
+		color: #000000
+	.accordion-link,
+	.menu-link
+		padding: 1em
+	a.accordion-link
+		justify-content: space-between
+		align-items: center
+		text-decoration: none
+		font-size: 1.25em
+		display: none
+		background: #ffffff
+		border-bottom: 1px solid #e5ebf0
+		i
+			font-size: 1.5em
+			transition: transfrom 250ms linear
+		&.active
+			i
+				transform: rotate(-.5turn)
+
+.tab-content
+	display: none
+	h3
+		margin-bottom: 1em
+	p
+		margin-bottom: 1em
+
+.menu-carousel
+	margin-top: 2em
+	padding: 0 3em
+	opacity: 0
+	transition: opacity 250ms ease-in
+	height: 0
+	overflow: hidden
+	&.show
+		opacity: 1
+		height: auto
+	&.owl-carousel
+		.owl-nav
+			button
+				position: absolute
+				z-index: 1
+				top: 0
+				bottom: 0
+				display: block
+				width: 2.5em
+				height: 2.5em
+				margin: auto
+				i
+					font-size: 2.5em
+					color: #3f505a
+				&.owl-prev
+					left: 0
+					transform: rotate(.25turn)
+				&.owl-next
+					right: 0
+					transform: rotate(-.25turn)
+	a
+		text-decoration: none
+		color: #3f505a
+		.image
+			margin-bottom: 1em
+
+#about-tab
+	.btn-main
+		font-size: 0.8em

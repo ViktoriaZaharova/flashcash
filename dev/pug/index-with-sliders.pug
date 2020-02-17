@@ -1,0 +1,40 @@
+extends template/main
+
+block variables
+	- var title = 'FlashCash'
+
+block content
+	include ./modules/approved-bubble
+	include ./modules/index/calculate-section
+	include ./modules/index/2
+	include ./modules/index/3
+	include ./modules/index/4
+	include ./modules/index/5
+	include ./modules/index/6
+	include ./modules/index/7
+	include ./modules/index/8
+	.container.pb-2em.pt-2em
+		h1.mb-1em ссылки на страницы
+		.flex.items-center.child-col-sm-3.child-col-xs-6
+			.col
+				a(href="/registration-login.html") Регистрация и логин
+			.col
+				a(href="/stock.html") Акции
+			.col
+				a(href="/stock-item.html") Акция
+			.col
+				a(href="/about.html") О нас
+			.col
+				a(href="/question-answer.html") Вопрос ответ
+			.col
+				a(href="/registration-login.html") Регистрация и логин
+			.col
+				a(href="/credit-form.html") Регистрационная форма
+			.col
+				a(href="/change-password.html") Смена пароля
+			.col
+				a(href="/404.html") 404
+			.col
+				#sw-success Попап success
+			.col
+				#sw-error Попап error

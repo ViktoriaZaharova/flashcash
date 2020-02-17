@@ -1,0 +1,52 @@
+.approved-bubble
+	background: #ffffff
+	position: fixed
+	top: 10px
+	right: -100%
+	z-index: 101
+	display: flex
+	flex-direction: row
+	align-items: center
+	transition: all .2s
+	font-size: 0.5em
+	&.show
+		right: 2em
+	&:before
+		content: ''
+		background: $orange
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		z-index: -1
+		transform: skewX(-10deg)
+		box-shadow: 0px 3px 5px rgba(29, 29, 27, 0.38)
+	.icon
+		padding: 1.5em 2.2em
+		position: relative
+		&:before
+			content: ''
+			background: $dark-blue
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			z-index: -1
+			transform: skewX(-10deg)
+		i
+			font-size: 4.5em
+			color: #ffffff
+	.info
+		padding: 1em 3em 1em 2em
+		.name
+			font-size: 1.3em
+			font-family: $montserrat-semibold
+			margin-bottom: 0.5em
+		.text
+			font-family: $montserrat-medium
+			span
+				font-size: 1.3em
+				margin: 0 0.3em
+				display: inline-block

@@ -1,0 +1,204 @@
+.main-personal-page
+	padding: 3em 0
+	.personal-menu
+		li
+			margin-bottom: 0.5em
+			font-size: 1.1em
+			&.active
+				color: $orange
+			a
+				color: #000000
+	.user-photo
+		margin-bottom: 3em
+		position: relative
+		display: inline-block
+		img
+			max-width: 100%
+		#change-photo
+			position: absolute
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 3em
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			color: #b9c8d2
+			transition: opacity 200ms ease-in
+			cursor: pointer
+			background: rgba(0, 0, 0, 0.45)
+			opacity: 0
+			&:hover
+				opacity: 1
+	.user-name
+		font-family: $montserrat-semibold
+		font-size: 1.25em
+		color: $dark-blue
+		margin-bottom: 0.3em
+		display: flex
+		align-items: center
+		#edit-data
+			display: inline-block
+			color: #b9c8d2
+			font-size: 1.1em
+			margin-left: 0.5em
+			cursor: pointer
+			transition: $btn-transition
+			&:hover
+				color: $orange
+	.user-id
+		font-family: $montserrat-medium
+		color: $orange
+	.data-block
+		padding: 1.5em 0
+		.data-block-head
+			font-family: $montserrat-semibold
+			font-size: 1.1em
+			color: $dark-blue
+			margin-bottom: 1em
+			.icon
+				display: inline-block
+				vertical-align: middle
+				margin-right: 0.5em
+				font-size: 1.8em
+		.data-block-content
+			.form-group
+				margin-bottom: 0.5em
+				label
+					font-size: 0.85em
+					font-family: $montserrat-medium
+	.cards
+		table
+			thead
+				tr
+					td
+						padding-top: 0
+			tr
+				td
+					&:first-child
+						width: 100%
+	.social-links
+		.social-links-item
+			display: flex
+			align-items: center
+			margin-bottom: 0.5em
+			.remove
+				margin-left: 0.7em
+				font-size: 2em
+				color: $dark-blue
+				cursor: pointer
+				transition: color 200ms ease-in
+				&:hover
+					color: red
+		.add-link
+			text-decoration: underline
+			color: $orange
+			margin-top: 2em
+			cursor: pointer
+			transition: color 200ms ease-in
+			&:hover
+				color: $dark-blue
+	.remove-icon
+		display: inline-block
+		vertical-align: middle
+		color: #3f505a
+		font-size: 1.1em
+		transition: $btn-transition
+		cursor: pointer
+		&:hover
+			color: red
+	.download-icon
+		display: inline-block
+		vertical-align: middle
+		color: #3f505a
+		transition: $btn-transition
+		&:hover
+			color: $orange
+			text-decoration: none
+			
+.credit-container
+	overflow-x: auto
+	overflow-y: hidden
+	.credit-container-heading
+		min-width: 650px
+		display: flex
+		> div
+			flex-basis: 25%
+			width: 25%
+			color: $dark-blue
+			font-size: 1.1em
+			font-family: $montserrat-semibold
+			padding: 0 1em 2em
+			&:first-child
+				padding-left: 0
+			&:last-child
+				padding-right: 0
+	.credit-container__item
+		min-width: 650px
+		padding: 0.5em
+		cursor: pointer
+		&:not(.opened)
+			transition: background 250ms ease-in
+			&:hover
+				background-color: #e5ebf0
+		&.opened
+			.credit-container__item--head
+				.open
+					transform: rotate(180deg)
+		.credit-container__item--head
+			display: flex
+			align-items: center
+			position: relative
+			> div
+				flex-basis: 25%
+				width: 25%
+				.card-icon
+					display: inline-block
+					vertical-align: middle
+					font-size: 1.8em
+					margin-right: 0.5em
+					color: $dark-blue
+			.open
+				cursor: pointer
+				transition: $btn-transition
+				font-size: 1.2em
+				position: absolute
+				z-index: 1
+				right: 0
+				top: 0
+				height: 1.2em
+				margin: auto
+				bottom: 0
+				&:hover
+					color: $orange
+		.credit-container__item--content
+			display: none
+			margin: 2em 0
+			> div
+				> div
+					display: flex
+					justify-content: space-between
+					> div
+						padding: 1em 1.6em
+						&:last-child
+							white-space: nowrap
+			.final,
+			.title
+				display: flex
+				justify-content: space-between
+				color: $dark-blue
+				font-family: $montserrat-semibold
+				font-size: 1.05em
+				> div
+					padding: 1em 1.6em
+			.title
+				background: #e5ebf0
+			.final
+				background: $orange
+			.data
+				background: #eff3f6
+				> div
+					> div
+						padding: 0.25em 1.6em

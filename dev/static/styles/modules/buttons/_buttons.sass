@@ -1,0 +1,68 @@
+.btn-main
+	font-size: 1.05em
+	border: 0
+	padding: 1em 4.25em
+	transition: $btn-transition
+	cursor: pointer
+	font-family: $montserrat-medium
+	color: #000000
+	text-decoration: none
+	display: inline-block
+	border: 1px solid
+	&:hover
+		text-decoration: none
+	&.btn-orange
+		background: $orange
+		border-color: $orange
+		&:hover
+			background: $dark-blue
+			border-color: $dark-blue
+			color: #ffffff
+			i
+				color: #ffffff
+	&.btn-white
+		background: #ffffff
+		border-color: #ffffff
+		&:hover
+			background: $orange
+			border-color: $orange
+	&.btn-gray
+		background: $light-blue3
+		border-color: $light-blue3
+		&:hover
+			background: $dark-blue
+			border-color: $dark-blue
+			color: #ffffff
+	&.btn-blue
+		background: $dark-blue
+		border-color: $dark-blue
+		color: #ffffff
+		i
+			color: #ffffff
+		&:hover
+			background: $orange
+			border-color: $orange
+			color: #000000
+			i
+				color: $dark-blue
+	&.btn-with-border
+		background: transparent
+		border: 1px solid $dark-blue
+		&:hover
+			background: transparent
+			border-color: $orange
+			color: $orange
+	&.btn-medium
+		padding: 1em 2em
+	&.btn-small
+		padding: 0.5em 1em
+		font-size: 0.9em
+	i
+		vertical-align: middle
+		margin-right: 0.5em
+		font-size: 1.5em
+		color: $dark-blue
+		transition: $btn-transition
+		&.icon-fc-add-card
+			position: relative
+			top: -3px

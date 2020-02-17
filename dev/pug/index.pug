@@ -1,0 +1,126 @@
+extends template/main
+
+block variables
+	- var title = 'FlashCash'
+	- var pageClass = 'index-page'
+
+block content
+	include ./modules/approved-bubble
+	include ./modules/index/calculate-section
+	include ./modules/index/2
+	include ./modules/index/3
+	include ./modules/index/4
+	include ./modules/index/5
+	include ./modules/index/6
+	include ./modules/index/7
+	include ./modules/index/8
+	.container.pb-2em.pt-2em
+		h1.mb-1em ссылки на страницы
+		.flex.items-center.child-col-sm-3.child-col-xs-6
+			.col
+				a(href="/registration-login.html") Регистрация и логин
+			.col
+				a(href="/stock.html") Акции
+			.col
+				a(href="/stock-item.html") Акция
+			.col
+				a(href="/about.html") О нас
+			.col
+				a(href="/question-answer.html") Вопрос ответ
+			.col
+				a(href="/registration-login.html") Регистрация и логин
+			.col
+				a(href="/credit-form.html") Регистрационная форма
+			.col
+				a(href="/change-password.html") Смена пароля
+			.col
+				a(href="/credit-form-one-step.html") Кредитная форма в один шаг
+			.col
+				a(href="/credit-form-last-step.html") Кредитная форма документы
+			.col
+				a(href="/404.html") 404
+			.col
+				a(href="/index-with-sliders.html") Главная страница без календаря
+			.col
+				#sw-success Попап success
+			.col
+				#sw-error Попап error
+			.col
+				#sw-basket Попап с корзиной
+			script.
+				document.getElementById('sw-basket').addEventListener('click', function() {
+					var countDownDate = new Date('November 4, 2019 23:00:00').getTime(),
+						distance = getTimerDistance(countDownDate),
+						clockValue = getClockValues(distance);
+
+					Swal.fire({
+						title: false,
+						type: '',
+						html: '<div class="status-popup">' +
+							'<div class="icon">' +
+							'<img src="./static/images/png/basket.png">' +
+							'</div>' +
+							'<h3>Поздравляем!</h3>' +
+							'<p>Ваш кредит одобрен.</p>' +
+							'<div class="popup-timer">' +
+							'<div class="item hours"><span class="value">' + clockValue.hours + '</span></div><span>:</span>' +
+							'<div class="item minutes"><span class="value">' + clockValue.minutes + '</span></div><span>:</span>' +
+							'<div class="item seconds"><span class="value">' + clockValue.seconds + '</span></div>' +
+							'</div>' +
+							'</div>',
+						showCloseButton: false,
+						showCancelButton: false,
+						focusConfirm: true,
+						confirmButtonText: '<a class="btn-main btn-orange" href="/">Получить деньги</a>',
+						onClose: function() {
+							clearInterval(timerInterval);
+						}
+					});
+					startTimer(document.querySelector('.popup-timer'), countDownDate);
+				});
+			.col
+				#sw-minute Попап минуты секунды
+			script.
+				document.getElementById('sw-minute').addEventListener('click', function() {
+					var countDownDate = new Date('November 4, 2019 23:00:00').getTime(),
+						distance = getTimerDistance(countDownDate),
+						clockValue = getClockValues(distance);
+
+					Swal.fire({
+						title: false,
+						type: '',
+						html: '<div class="status-popup">' +
+							'<div class="icon">' +
+							'<img src="./static/images/png/card-success.png">' +
+							'</div>' +
+							'<h3>Поздравляем!</h3>' +
+							'<p>Ваш кредит одобрен.</p>' +
+							'<div class="popup-timer">' +
+							'<div class="item minutes"><span class="value">' + clockValue.minutes + '</span></div><span>:</span>' +
+							'<div class="item seconds"><span class="value">' + clockValue.seconds + '</span></div>' +
+							'</div>' +
+							'</div>',
+						showCloseButton: false,
+						showCancelButton: false,
+						focusConfirm: true,
+						confirmButtonText: '<a class="btn-main btn-orange" href="/">Получить деньги</a>',
+						onClose: function() {
+							clearInterval(timerInterval);
+						}
+					});
+					startTimer(document.querySelector('.popup-timer'), countDownDate);
+				});
+			.col
+				#sw-news Попап подписаны на новости
+			.col
+				#sw-documents Попап подписанные документы
+			.col
+				a(href="/select-card.html") Выбор карты
+			.col
+				a(href="/payment-message.html") Сообщение после платежа
+			.col
+				a(href="/repay.html") Погасить кредит
+			.col
+				a(href="/index-product.html") Главная продукт
+			.col
+				a(href="/document.html") Документ pdf

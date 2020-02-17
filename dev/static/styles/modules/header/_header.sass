@@ -1,0 +1,198 @@
+header.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: $z-header
+	background: #ffffff
+	transition: box-shadow 200ms ease-in-out
+	&.scrolled
+		box-shadow: 0px 2px 6px rgba(29, 29, 27, 0.38)
+	.container
+		position: relative
+	.horizontal-line
+		border-top: 4px solid $light-blue3
+	.logo
+		max-width: 100%
+		width: 14.25em
+		background-image: url($base-svg-path + $logo)
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: 0 center
+		height: 65px
+		display: block
+	.main-menu
+		> ul
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-left: -0.15em
+			margin-right: -0.15em
+			> li
+				padding: 0 0.15em
+				> a
+					text-decoration: none
+					color: #000000
+					font-size: 1.2em
+					display: flex
+					align-items: center
+					position: relative
+					padding: 2rem 1rem 1rem
+					height: 100px
+					&:before
+						content: ''
+						background: transparent
+						position: absolute
+						top: 0
+						right: 0
+						left: 0
+						bottom: 0
+						z-index: -1
+						transform: skewX(-10deg)
+					&:not(.cabinet)
+						&:hover,
+						&.active
+							color: #ffffff
+							&:before
+								background: $orange
+							.icon
+								color: #ffffff
+					.icon
+						color: $dark-blue
+						margin-right: 0.5em
+						font-size: 1.45em
+	.cabinet-container
+		position: relative
+		padding: 2rem 1rem 1rem
+		height: 100px
+		display: inline-flex
+		align-items: center
+		&.open
+			.user-menu
+				display: block
+			.icon-fc-angle-down
+				transform: rotate(180deg)
+		.cabinet
+			display: flex
+			align-items: center
+			text-decoration: none
+			color: #000000
+			font-size: 1.2em
+			display: flex
+			align-items: center
+			position: relative
+			z-index: 2
+			.icon
+				color: $dark-blue
+				margin-right: 0.5em
+				font-size: 1.45em
+			.text
+				margin-right: 1em
+				span
+					display: block
+				.name
+				.id
+					font-family: $montserrat-semibold
+					color: $orange
+		.user-menu
+			position: absolute
+			left: 0
+			right: 0
+			top: 1.5rem
+			z-index: 1
+			background: #ffffff
+			padding: 5rem 0.8rem 1.5rem 50px
+			box-shadow: 0 0 13px rgba(0,0,0,0.26)
+			display: none
+			li
+				&:not(:last-child)
+					margin-bottom: 1em
+				a
+					color: #000000
+					text-decoration: none
+					transition: $href-transition
+					&:hover
+						color: $orange
+	.lang-switcher-container
+		position: relative
+		a
+			font-family: $opensans-light
+			padding: 12px 14px
+			display: inline-block
+			position: relative
+			text-decoration: none
+			color: #ffffff
+			line-height: 1
+			&:before
+				content: ''
+				background: $dark-blue
+				position: absolute
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+				z-index: -1
+				transform: skewX(-10deg)
+		ul
+			text-align: right
+			position: absolute
+			z-index: 1
+			top: 100%
+			right: 8px
+			display: none
+			li
+				a
+					&:hover
+						&:before
+							background: $orange
+				&:first-child
+					a
+						margin-right: 30px
+						margin-top: -10px
+						margin-bottom: -10px
+						z-index: 1
+				&:nth-child(2)
+					a
+						margin-right: 3px
+			&.open
+				display: block
+				& ~ a
+					cursor: default
+
+#burger
+	width: 56px
+	height: 56px
+	cursor: pointer
+	top: 0
+	right: 0
+	display: none
+	align-items: center
+	justify-content: center
+	.burger-ico
+		position: relative
+		&:before
+			content: ''
+			display: block
+			width: 35px
+			height: 2px
+			background-color: #000000
+			transition: .2s cubic-bezier(.47,-0.77,.6,1.80)
+		&:after
+			content: ''
+			display: block
+			width: 25px
+			height: 2px
+			background-color: #000000
+			margin-top: 5px
+			transition: .2s cubic-bezier(.47,-0.77,.6,1.80)
+		&.active
+			&:before
+				margin-top: 2px
+				transform: rotate(-45deg)
+			&:after
+				width: 35px
+				margin-top: -2px
+				transform: rotate(45deg)
+
+
+@import './about-us'

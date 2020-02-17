@@ -1,0 +1,24 @@
+.pagination
+	ul
+		display: flex
+		flex-wrap: wrap
+		li
+			margin-right: 12px
+			margin-bottom: 10px
+			&.inactive
+				padding: 10px 15px
+				background: $input-color
+			&.active
+				padding: 10px 15px
+				color: #ffffff
+				background: $orange
+			a
+				background: $input-color
+				display: block
+				color: #000000
+				padding: 10px 15px
+				transition: color, background 200ms ease-in
+				&:hover
+					text-decoration: none
+					color: #ffffff
+					background: $orange

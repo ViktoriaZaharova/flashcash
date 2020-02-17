@@ -1,0 +1,19 @@
+extends template/main
+
+block variables
+	- var title = 'Погасить кредит'
+	- var pageClass = ''
+
+block content
+	- var headName = 'Погасить кредит'
+	include ./modules/head-with-image
+	.all-stocks-container
+		.container
+			.flex.center
+				h3.semibold.size-1_3em.dark-blue.mb-2em.text-center Для погашения займа введите, пожалуйста, Ваш номер телефона указанный при регистрации
+				.repay-container
+					form
+						.form-group.input-effect
+							input(type="tel" name="tel")
+							label Номер телефона
+					button.btn-main.btn-orange Погасить

@@ -1,0 +1,71 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Кредиты'
+	- var pageClass = ''
+	- var headName = 'Кредиты'
+
+block content
+	.credit-container
+		.credit-container-heading
+			div Номер договора
+			.text-center Сумма
+			.text-center Дата
+			.text-center Статус
+		- for (var i = 0; i < 4; ++i)
+			.credit-container__item
+				.credit-container__item--head
+					div
+						.card-icon
+							i.icon-fc-mini-logo(aria-hidden="true")
+						a.link-black.link-border(href="#") КК - 12357800
+					.text-center  5 000 грн
+					.text-center  05.06.2019
+					.text-center.c-orange Кредит одобрен
+					i.open.icon-fc-angle-down(aria-hidden="true")
+				.credit-container__item--content
+					.title
+						div Условия согласно договора:
+						div 0,00
+					.data
+						div
+							div - размер процентной ставки: 
+							div 2,00%
+						div
+							div - срок кредита:
+							div 20 дней
+						div 
+							div - дата погашения по кредиту:
+							div 19.06.2019
+					.title
+						div Погашено клиентом на данную дату:
+						div 0,00
+					.data
+						div
+							div - суммы кредита:
+							div 0,00
+						div
+							div - суммы процентов:
+							div 0,00
+						div 
+							div - сумма штрафа:
+							div 0,00
+					.title
+						div Плановая сумма до погашения:
+						div 20 000,00
+					.data
+						div
+							div - остаток суммы кредита:
+							div 9 700,00
+						div
+							div - суммы процентов:
+							div 1 230,00
+						div 
+							div - сумма штрафа:
+							div 0,00
+					.final
+						div Сумма задолжености до полного погашения:
+						div 18 000,00
+	.actions.text-right.mt-4em
+		a.btn-main.btn-orange.btn-with-border.mr-1em(href="#") Новый кредит
+		a.btn-main.btn-orange(href="#") Погасить кредит

@@ -1,0 +1,118 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Личные данные'
+	- var pageClass = ''
+	- var headName = 'Личные данные'
+	- var currentPersonalMenu = 0
+
+block content
+	.user-name
+		| Имя Фамилия Отчество
+		i#edit-data.icon-fc-pencil(aria-hidden="true")
+	.user-id ID 106908
+	.data-block
+		.data-block-head
+			.icon
+				i.icon-fc-user-2(aria-hidden="true")
+			| Личные данные
+		.data-block-content
+			.flex-2em.child-col-md-6.child-col-sm-12.child-col-xs-12
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Дата рождения:
+							.col
+								input(type="text" value="28.09.1990" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Пол:
+							.col
+								input(type="text" value="Мужской" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Мобильный телефон:
+							.col
+								input(type="text" value="+ 38 (066) - 322 - 67 - 30" disabled="disabled")
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Семейное положение:
+							.col
+								input(type="text" value="Женат" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Образование:
+							.col
+								input(type="text" value="Высшее" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Количество детей
+							.col
+								input(type="text" value="1" disabled="disabled")
+	.data-block
+		.data-block-head
+			.icon
+				i.icon-fc-passport(aria-hidden="true")
+			| Паспортные данные
+		.data-block-content
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Серия, номер паспорта:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="СО 154534" disabled="disabled")
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Кем выдан:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="Голосеевским РУ ГУ МВД Украины в городе Киеве" disabled="disabled")
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Номер ИНД:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="3232126570" disabled="disabled")
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Дата выдачи паспорта:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="23.09.2005" disabled="disabled")
+	.data-block
+		.data-block-head
+			.icon
+				i.icon-fc-id-card(aria-hidden="true")
+			| Данные ID карты
+		.data-block-content
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Номер записи ID:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="19902323 - 34242" disabled="disabled")
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Номер ID:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="3423423414" disabled="disabled")
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em ID действителен до:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="15.09.2025" disabled="disabled")
+			.form-group.input-effect
+				.flex.items-center
+					.col-xs-12.col-sm-12.col-md-3
+						label.pr-1em Кем выдан ID:
+					.col-xs-12.col-sm-12.col-md-9
+						input(type="text" value="Голосеевским 123" disabled="disabled")

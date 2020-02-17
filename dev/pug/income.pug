@@ -1,0 +1,52 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Доходы'
+	- var pageClass = ''
+	- var headName = 'Доходы'
+	- var currentPersonalMenu = 1
+
+block content
+	.user-name
+		| Имя Фамилия Отчество
+		i#edit-data.icon-fc-pencil(aria-hidden="true")
+	.user-id ID 106908
+	.data-block
+		.data-block-head
+			.icon
+				i.icon-fc-purse(aria-hidden="true")
+			| Данные про доходы и платежи
+		.data-block-content
+			.flex-2em.child-col-md-6.child-col-sm-12.child-col-xs-12
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Получал кредит на протяжении последних 5 лет::
+							.col
+								input(type="text" value="Нет" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Ежемесячный платеж за текущими кредитами
+							.col
+								input(type="text" value="10000" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Сумма основного дохода:
+							.col
+								input(type="text" value="100000" disabled="disabled")
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Частота оплаты дохода:
+							.col
+								input(type="text" value="2 раза в месяц" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Дата следующей оплаты дохода:
+							.col
+								input(type="text" value="01.06.2019" disabled="disabled")

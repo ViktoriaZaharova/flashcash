@@ -1,0 +1,75 @@
+header.header
+	.container
+		.horizontal-line
+		.flex-1em.items-center.space-between
+			.col-sm-2.col-xs-4
+				a.logo(href="/" alt="FlashCash" title="Home")
+			.col-sm-9.main-menu-col
+				nav.main-menu
+					ul
+						li
+							a#about-us(href="#")
+								span.icon
+									i.icon-fc-burger(aria-hidden="true")
+								span.text О нас
+						li
+							a(href="#")
+								span.icon
+									i.icon-fc-card(aria-hidden="true")
+								span.text Получить
+						li
+							a(href="#")
+								span.icon
+									i.icon-fc-purse(aria-hidden="true")
+								span.text Погасить
+						li
+							a(href="#")
+								span.icon
+									i.icon-fc-gift(aria-hidden="true")
+								span.text Акции
+						li
+							//- a.login-desktop(href="#")
+							//- 	span.icon
+							//- 		i.icon-fc-mini-logo(aria-hidden="true")
+							//- 	span.text Мой
+							//- 		br
+							//- 		| кабинет
+							.cabinet-container
+								a.cabinet(href="#")
+									span.icon
+										i.icon-fc-user(aria-hidden="true")
+									span.text
+										span.name Иващена...
+										span.id ID 105498
+									i.icon-fc-angle-down(aria-hidden="true")
+								ul.user-menu
+									li
+										a(href="/personal-datas.html") Профиль
+									li
+										a(href="/documents.html") Документы
+									li
+										a(href="/credits.html") Кредиты
+									li
+										a(href="/transaction-history.html") Транзакции
+									li
+										a(href="#") Смена пароля
+									li
+										a(href="#") Выход
+			.col-sm-1.text-right.site-controls
+				#burger
+					.burger-ico
+				.lang-switcher-container
+					ul
+						li
+							a(href="#") анг
+						li
+							a(href="#") рус
+					a(href="#") укр
+				a.login-mobile(href="/registration-login.html")
+					i.icon-fc-user(aria-hidden="true")
+	include ./about-us
+	script.
+		var sliderText = 'Доступная сумма растет с каждым новым кредитом';
+		var monthNames = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'],
+			monthNamesSclon = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+			weekDayNames = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];

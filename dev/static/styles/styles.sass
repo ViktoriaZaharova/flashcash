@@ -1,0 +1,520 @@
+@import "utils/_libs"
+@import "utils/_vars"
+@import "utils/_mixins"
+@import "utils/_fonts"
+
+html
+	font-size: $base-font-size
+
+html,
+body
+	height: 100%
+	font-family: $montserrat-regular
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin: 0
+
+ul,
+li
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+ul
+	-webkit-padding-start: 0
+	padding-start: 0
+	-moz-padding-start: 0
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+p
+	margin: 0
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea
+	vertical-align: middle
+
+textarea
+	resize: none
+
+section
+	position: relative
+
+input,
+select,
+button,
+textarea
+	outline: none
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+
+.wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+	padding-top: 100px
+
+.content
+	flex: 1 0 auto
+
+.container
+	margin: 0 auto
+	max-width: $content-size
+	width: 100%
+
+.relative
+	position: relative
+
+.fs-0_85rem
+	font-size: 0.85rem
+
+.self-end
+	align-self: flex-end
+
+.semibold
+	font-family: $montserrat-semibold
+
+.f-medium
+	font-family: $montserrat-medium
+
+.dark-blue
+	color: $dark-blue
+
+.c-orange
+	color: $orange !important
+
+.dark-a-bordered
+	border-bottom: 1px solid #000000
+	text-decoration: none
+	transition: all 200ms ease-in
+	color: #000000
+	&:hover
+		text-decoration: none
+		border-color: $orange
+		color: $orange
+
+.dark-a-bordered-white
+	border-bottom: 1px solid #000000
+	text-decoration: none
+	transition: all 200ms ease-in
+	color: #000000
+	&:hover
+		text-decoration: none
+		border-color: #ffffff
+		color: #ffffff
+
+.bg-blue
+	background: $light-blue2
+
+.about
+	ul.custom-ul
+		width: 650px
+		max-width: 100%
+		margin: auto auto 2.5em
+
+.decoration-underline
+	text-decoration: underline
+
+.link-black
+	color: black
+	transition: $btn-transition
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: $orange
+
+.link-blue
+	color: $blue
+	transition: $btn-transition
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: #000000
+
+.link-border
+	border-bottom: 1px solid
+
+.d-block
+	display: block
+
+.d-i-block
+	display: inline-block
+
+.input-buffer
+	position: absolute
+	top: -1000px
+	left: -1000px
+	visibility: hidden
+	white-space: nowrap
+	font-size: 1.2rem
+
+input[type="range"]
+	display: none
+
+.mb-2_3em
+	margin-bottom: 2.3em
+
+@keyframes pulse
+	from
+		box-shadow: 0 0 0 0 rgba(244, 137, 67, .8)
+	to
+		box-shadow: 0 0 6px 16px rgba(244, 137, 67, 0)
+
+$button-bc: #3f505a
+$button-c: #ffffff
+
+$facebook-c: #547af5
+$viber-c: #59267C
+$telegram-c: #34ABE3
+$vk-c: #45668e
+
+$popup-icon-container-size: 2.75em
+$popup-icon-size: 1.25em
+
+.fast-social
+	width: 4em
+	height: 4em
+	z-index: 10000
+	right: 2em
+	bottom: 2em
+	position: fixed
+	font-family: Roboto, Arial, sans-serif
+	&__show
+		.fast-social
+			&__popup
+				transform: scale(1)
+			&__button
+				background: $orange
+				.pulsation
+					animation: none
+					opacity: 0
+					display: none
+		
+	*
+		box-sizing: border-box
+	&__popup
+		background: center no-repeat #FFF
+		box-shadow: 0 0 30px rgba(0, 0, 0, .2)
+		width: 15em
+		position: absolute
+		bottom: 5em
+		right: 0
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding: 1em 0
+		box-sizing: border-box
+		border-radius: 20px
+		transform-origin: 80% 105%
+		transform: scale(0)
+		transition: ease-out .12s all
+		z-index: 10000
+		&::before
+			content: ''
+			position: absolute
+			bottom: -0.5em
+			right: 1.5em
+			left: auto
+			display: inline-block
+			border-right: 0.5em solid transparent
+			border-top: 0.5em solid #FFF
+			border-left: 0.5em solid transparent
+		a
+			display: flex
+			width: 100%
+			align-items: center
+			padding: 0.5em 1em
+			text-decoration: none
+			.icon
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				border-radius: 50%
+				width: $popup-icon-container-size
+				height: $popup-icon-container-size
+				color: #ffffff
+				i
+					font-size: $popup-icon-size
+			.text
+				padding-left: 1em
+				color: #000000
+				font-family: $montserrat-regular
+				font-size: 18px
+			&:hover
+				background-color: #EEEEEE
+			&.facebook
+				.icon
+					background-color: $facebook-c
+			&.viber
+				.icon
+					background-color: $viber-c
+			&.telegram
+				.icon
+					background-color: $telegram-c
+			&.vk
+				.icon
+					background-color: $vk-c
+	&__button
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		background-color: $button-bc
+		color: $button-c
+		transition: background-color 150ms ease-in-out
+		.hide
+			transform: scale(0)
+			opacity: 0
+		&--inner
+			font-size: 1.5em
+			> *
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: all 200ms
+			.static
+				font-size: 2.1em
+				color: $orange
+			.close
+				font-size: 1.5em
+				color: $dark-blue
+			.icons
+				width: 1.75em
+				height: 1.75em
+				left: 0
+				right: 0
+				bottom: 0
+				top: 0
+				margin: auto
+				overflow: hidden
+				justify-content: flex-start
+				border-radius: 50%
+				background-color: #ffffff
+				color: $button-bc
+				&__line
+					position: absolute
+					display: flex
+					transform: translateX(0.25em)
+					transition: transform 200ms linear
+					span
+						display: inline-flex
+						align-items: center
+						justify-content: center
+						width: 1.25em
+						height: 1.25em
+						&:not(:last-child)
+							margin-right: 3em
+		.pulsation
+			width: 5em
+			height: 5em
+			background-color: $button-bc
+			z-index: -1
+			animation: fast-social-pulse 2s infinite
+			border-radius: 50%
+			position: absolute
+			margin: auto
+			left: -0.5em
+			top: -0.5em
+			opacity: 0
+			&:nth-of-type(2n)
+				animation-delay: 500ms
+
+@keyframes fast-social-pulse
+	0%
+		transform: scale(0)
+		opacity: 1
+	50%
+		opacity: 0.5
+	100%
+		transform: scale(1)
+		opacity: 0
+
+.second-link
+	border-bottom: 1px solid #000000
+	color: #000000
+	transition: all 200ms ease-in
+	color: #000000
+	text-decoration: none
+	display: inline-block
+	&:hover
+		text-decoration: none
+		color: $orange
+		border-color: $orange
+
+.message
+	text-align: center
+	font-family: $montserrat-semibold
+	padding: 1em 2em
+	font-size: 1.1em
+	color: #ffffff
+
+.bg-success
+	background-color: $success
+
+#pdf-viewer
+	height: 75vh
+
+.mb-0-imp
+	margin-bottom: 0 !important
+
+.document-actions
+	> *:first-child
+		margin-right: 1em
+
+.wizard > .content > .body input[type="checkbox"]
+	width: 1px
+
+.form-calendar-container
+	display: flex
+	align-items: flex-start
+	.form-group
+		flex-basis: calc(100% - 110px)
+		width: calc(100% - 110px)
+	.calendar
+		display: inline-flex
+		align-items: center
+		flex-basis: 110px
+		width: 110px
+		cursor: pointer
+		.icon
+			color: $dark-blue
+			font-size: 1.5em
+			padding-left: 0.5em
+		input
+			border: 1px solid #ccc
+			border-width: 0 0 1px
+			border-color: #707f88
+			padding: 10px 0
+			background-color: transparent
+			color: #000
+			font-size: 0.85em
+			line-height: 1
+			text-align: right
+			width: 100%
+			cursor: pointer
+
+.daterangepicker td.active
+	background-color: $dark-blue !important
+
+.close-credit
+	background-color: $light-blue2
+	&__container
+		box-shadow: 0 0 21px rgba(211, 209, 209, 0.21)
+		border-radius: 4px
+		background-color: #fff
+		padding: 3em 5em
+		> div > div:first-child
+			border-right: 1px solid rgba($dark-blue, .3)
+		h5
+			font-size: 19px
+			text-align: center
+			margin-bottom: 30px
+			font-family: $montserrat-medium
+			color: $dark-blue
+		table
+			tr
+				td
+					&:first-child
+						position: relative
+						overflow: hidden
+						&::after
+							content: ''
+							position: absolute
+							bottom: 0.7em
+							width: 1000px
+							height: 0
+							border-bottom: 1px dotted #777777
+					&:last-child
+						padding-left: 0
+						width: 10px
+	&__action
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-left: -0.5em
+		margin-right: -0.5em
+		margin-top: 2em
+		> *
+			padding-left: 0.5em
+			padding-right: 0.5em
+			flex-basis: 50%
+			width: 50%
+		button
+			padding: 1em
+			display: block
+			width: 100%
+		.form-group
+			margin-bottom: 0
+			display: inline-flex
+			align-items: center
+			span
+				padding-left: 0.5em
+			input
+				padding: 0.95em 0.7em
+				font-size: 1.05em
+				border: 1px solid $dark-blue
+
+.with-custom-tooltip
+	position: relative
+	.custom-tooltip
+		position: absolute
+		width: 200px
+		font-size: 0.8em
+		left: 0
+		right: 0
+		margin: auto
+		top: calc(100% + 10px)
+		padding: 0.75em
+		filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.24))
+		border-radius: 4px
+		background-color: #fff
+		color: #72838f
+		cursor: default
+		opacity: 0
+		visibility: hidden
+		z-index: -1
+		transition: opacity 250ms ease-in-out
+		&::before
+			content: ''
+			position: absolute
+			top: -2px
+			left: 0
+			right: 0
+			margin: auto
+			background: #ffffff
+			width: 1em
+			height: 1em
+			transform: rotate(45deg) translateZ(-1px)
+	&:hover
+		.custom-tooltip
+			opacity: 1
+			visibility: visible
+			z-index: 1
+	
+//Модули
+@import "modules/modules"
+@import "media"

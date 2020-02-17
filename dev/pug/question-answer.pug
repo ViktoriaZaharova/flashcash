@@ -1,0 +1,46 @@
+extends template/main
+
+block variables
+	- var title = 'Акции'
+	- var pageClass = ''
+
+block content
+	- var headName = 'Вопрос-ответ'
+	include ./modules/head-with-image
+	.question-answer-section.pt-5em.pt-2em-xs.pb-2em
+		.container
+			.question-answer-navigation
+				ul
+					li
+						a.anchor(href="#section-0") Погашение займа и продление сроков 
+					li
+						a.anchor(href="#section-1") Общие вопросы
+					li
+						a.anchor(href="#section-2") Оформление заявки
+					li
+						a.anchor(href="#section-3") Погашение заема
+					li
+						a.anchor(href="#section-4") Пролонгация
+					li
+						a.anchor(href="#section-5") Личный кабинет
+		- for (var y = 0; y < 6; y++)
+			.question-answer-block.mb-3em(id='section-' + y)
+				.container
+					h2.f-semibold.size-1_4em.c-orange.mb-1em Погашение займа и продление сроков
+				- for (var x = 0; x < 4; x++)
+					.question-answer-item
+						.container
+							.description.f-medium
+								span Как продлить срок погашения займа?
+						.answer-content
+							.container
+								.answer-content-inner
+									p.f-medium Это очень просто. Вам всего лишь нужно внести оплату за продление до истечения срока погашения займа.
+									p.f-medium Вы можете продлить заем на дополнительные 7, 14 или 30 дней. 
+									p.f-medium 1. С помощью Личного кабинета на Сайте в несколько кликов (списание с прикрепленной банковской карты)
+									p.f-medium 2. Оплатой по телефону через Контакт Центр:
+									p.semibold 067 326 2233  Kyivstar;
+										br
+										| 073 326 2233  Lifecell;
+										br
+										| 050 326 2233  Vodafone.

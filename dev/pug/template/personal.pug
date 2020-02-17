@@ -1,0 +1,52 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type="text/css" href="static/css/styles.min.css")
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body
+		.wrapper
+			include ../modules/header/header
+			.content
+				include ../modules/head-with-color
+				.main-personal-page
+					.container
+						.flex-2em
+							.col-xs-12.col-sm-12.col-md-3.text-center-sm.text-center-xs.text-left-md.mb-2em-sm.mb-2em-xs
+								- var personalMenu = ['Личные данные', 'Доходы и платежи', 'Адреса', 'Карточки', 'Я в социальных сетях', 'История транзакций']
+								- var personalMenuLinks = ['/personal-datas.html', '/income.html', '/addresses.html', '/cards.html', '/social.html', 'transaction-history.html']
+								div
+									.user-photo
+										img(src="./static/images/png/photo-personal.png", alt="")
+										#change-photo
+											i.icon-fc-camera(aria-hidden="true")
+										input.display-none(type="file")
+								ul.personal-menu
+									each val, index in personalMenu
+										if currentPersonalMenu == index
+											li.active=val
+										else
+											li
+												a(href=personalMenuLinks[index])=val
+							.col-xs-12.col-sm-12.col-md-9
+								block content
+			include ../modules/footer/footer
+		script(src="./static/js/libs/jquery/jquery-3.3.1.min.js")
+		script(src="./static/js/main.min.js")
+		script(src="./static/js/libs/owl.carousel/owl.carousel.min.js")
+		script(src="./static/js/libs/materialize/materialize.min.js")
+		script(src="./static/js/libs/rangeslider/rangeslider.min.js")
+		script(src="./static/js/libs/jquery.steps/jquery.steps.min.js")
+		block script

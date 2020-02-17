@@ -1,0 +1,14 @@
+extends template/main
+
+block variables
+	- var title = 'Регистрация, логин'
+	- var pageClass = ''
+
+block content
+	.registry-login-section
+		.container
+			.flex.center.child-col-xs-12
+				.col
+					include ./modules/registration-login/registry
+					include ./modules/registration-login/login
+					include ./modules/registration-login/reset-pass

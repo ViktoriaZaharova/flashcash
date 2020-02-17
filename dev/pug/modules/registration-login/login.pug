@@ -1,0 +1,17 @@
+.login-container
+	h2 Вход в личный кабинет
+	.login
+		form
+			.form-group.input-effect.error
+				input(type="tel" name="tel")
+				label Номер телефона
+				span.error-text Неверно
+			.form-group.input-effect.error
+				input(type="password" name="password")
+				label Введите пароль
+				span.error-text Неверно
+			button.btn-main.btn-orange(type="submit") Продолжить
+			.reset-pass
+				a(href="#") Забыли пароль?
+			.create-user Создать учётную запись
+				a(href="#") Регистрация

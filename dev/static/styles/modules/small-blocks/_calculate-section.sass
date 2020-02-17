@@ -1,0 +1,100 @@
+.calculate-section
+	position: relative
+	.owl-carousel .owl-item
+		.item
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+			min-height: 630px
+			.front-image
+				position: absolute
+				z-index: 0
+				left: 2%
+				top: 45%
+				bottom: 0
+				right: 70%
+				display: flex
+				align-items: flex-end
+				img
+					max-width: 100%
+					max-height: 100%
+					width: auto
+	.owl-dots
+		position: absolute
+		bottom: 1em
+		left: 0
+		right: 0
+		display: flex
+		justify-content: center
+		.owl-dot
+			@include size(14px)
+			margin: 0 9px
+			border: 1px solid $orange
+			border-radius: 14px
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 0 !important
+			&.active
+				span
+					display: block
+					background: $orange
+					@include size(6px)
+					border-radius: 6px
+	.description
+		padding-top: 3em
+		.slider-text
+			> *
+				color: $dark-blue
+			&:hover
+				text-decoration: none
+		h3
+			font-family: $montserrat-semibold
+			font-size: 32px
+			line-height: 35px
+			margin-bottom: 0.5em
+		h4
+			font-size: 31px
+			line-height: 35px
+			margin-bottom: 0.5em
+		p
+			font-size: 13px
+			line-height: 20px
+		.btn-main
+			background: $dark-blue
+			border-color: $dark-blue
+			border-width: 3px
+			border-radius: 3px
+			background: transparent
+			color: $dark-blue
+			margin-top: 1em
+			&:hover
+				background: $orange
+				border-color: $orange
+				color: #ffffff
+
+[data-type="with-sliders"]
+	#calendar
+		display: none
+	.credit-calculate
+		width: 650px
+		.credit-calculate__inner
+			.summ-slider.day-slider
+				display: block
+			.calendar-container .calendar-inner
+				flex-direction: column
+				.info-block
+					flex-direction: row
+					padding-left: 0
+					margin-left: -0.5em
+					align-items: flex-start
+					justify-content: space-between
+					> div
+						padding-left: 0.5em
+						padding-right: 0.5em
+						margin-bottom: 0
+					.info-block__payment
+						padding-right: 1em
+					h5
+						margin-bottom: 0.5em

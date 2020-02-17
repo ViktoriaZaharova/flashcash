@@ -1,0 +1,97 @@
+#fast-social.fast-social
+	.fast-social__popup
+		a.facebook(rel="nofollow noopener" href="#" target="_blank")
+			.icon
+				i.fab.fa-facebook-messenger
+			.text Messenger
+		a.viber(rel="nofollow noopener" href="#" target="_blank")
+			.icon
+				i.fab.fa-viber
+			.text Viber
+		a.telegram(rel="nofollow noopener" href="#" target="_blank")
+			.icon
+				i.fab.fa-telegram-plane
+			.text Telegram
+		a.vk(rel="nofollow noopener" href="#" target="_blank")
+			.icon
+				i.fab.fa-vk
+			.text VK
+	.fast-social__button
+		.fast-social__button--inner
+			.static
+				i.icon-fc-mini-logo
+			.icons.hide
+				.icons__line
+					span
+						i.fab.fa-facebook-messenger
+					span
+						i.fab.fa-viber
+					span
+						i.fab.fa-telegram-plane
+					span
+						i.fab.fa-vk
+			.close.hide
+				i.fas.fa-times
+		.pulsation
+		.pulsation
+footer.footer
+	.container
+		.flex-2em.child-col-md-3.child-col-sm-6.child-col-xs-12.child-mb-2em-sm.child-mb-2em-xs
+			- for (var x = 0; x < 4; x++)
+				.col
+					h6 Узнайте о нас больше
+					ul.footer-menu
+						li
+							a(href="#") Правовая информация
+						li
+							a(href="#") Договор займа
+						li
+							a(href="#") Финансовая отчетность
+						li
+							a(href="#") Политика конфиденциальности
+						li
+							a(href="#") Партнерам
+						li
+							a(href="#") Отзывы
+						li
+							a(href="#") Контакты
+		.footer-form
+			h6 Вступайте в наш клуб  Flash Cash
+			p Только для друзей уникальные акции, скидки и советы по экономии
+			form(action="")
+				.form-group.input-effect.with-background
+					input(type="text" name="name")
+					label Ваше имя
+				.form-group.input-effect.with-background
+					input(type="email" name="email")
+					label Ваш email
+				button.btn-main.btn-orange(type="sumbit") Подписаться
+		.flex-2em.items-end.child-col-xs-12
+			.col-sm-3.col-lg-3
+				a.logo(href="/" alt="FlashCash" title="Home")
+			.col-sm-5.col-lg-6.text-center-xs.mb-2em-xs
+				p.fs-0_85rem
+					| Первый в Украине сервис кредитования через интернет.
+					br
+					| Мы предоставляем быстрые и удобные кредиты для всех
+					br
+					| граждан Украины.
+					br
+					br
+					| © 2019 MyCredit - Кредит онлайн на банковскую карту за 20 минут 
+			.col-sm-4.col-lg-3
+				.social-links
+					h5.fs-0_85rem Cтать нашим другом:
+					ul
+						li
+							a(href="#")
+								i.icon-fc-facebook(aria-hidden="true")
+						li
+							a(href="#")
+								i.icon-fc-telegram(aria-hidden="true")
+						li
+							a(href="#")
+								i.icon-fc-instagram(aria-hidden="true")
+						li
+							a(href="#")
+								i.icon-fc-youtube(aria-hidden="true")

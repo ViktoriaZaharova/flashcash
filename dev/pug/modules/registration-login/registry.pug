@@ -1,0 +1,33 @@
+.registry-container
+	h2 Регистрация в FlashCash
+	.main-registry-container
+		.flex-2em.child-col-md-6.child-col-sm-12.child-col-xs-12
+			.col
+				p
+					| Введите свой действующий мобильный номер.
+					br
+					| Ваш телефон будет Вашим логином и на него
+					br
+					| будет отправлено сообщение с уникальным кодом, который необходим для продолжения регистрации.
+				.form-group.input-effect.error
+					input.phone-input(type="tel" name="tel" value="+38(")
+					label Номер телефона
+					span.error-text Неверно
+				.text-center
+					button.btn-main.btn-orange(type="submit") Получить код по СМС
+				.text-center
+					a.second-link.mt-1em(href="#") Или войдите в аккаунт
+			.col
+				.personal-assistant.mt-2em-sm.mt-2em-xs.mt-0-md.text-center-xs
+					h6 Ваш личный помощник
+					.flex-1em.space-between.mb-1_5em.column-reverse-xs
+						.col
+							.name Александра
+							.descr Персональный менеджер
+							.tel (067) 500 20 20
+							.tel (050) 500 20 20
+						.col.mb-1em-xs
+							img(src="./static/images/png/photo.png")
+					.hrefs.flex.space-between
+						a(href="#") текстовая подсказка
+						a(href="#") видеоподсказка

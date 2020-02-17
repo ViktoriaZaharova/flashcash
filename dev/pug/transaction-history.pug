@@ -1,0 +1,46 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | История транзакций'
+	- var pageClass = ''
+	- var headName = 'История транзакций'
+	- var currentPersonalMenu = 5
+
+block content
+	.user-name
+		| Имя Фамилия Отчество
+		i#edit-data.icon-fc-pencil(aria-hidden="true")
+	.user-id ID 106908
+	.table-container.mt-2em
+		table
+			thead
+				tr
+					td Карта
+					td Номер
+					td Сумма
+					td Дата
+					td Тип
+					td Статус
+			tbody
+				tr
+					td
+						.card-icon
+							i.icon-fc-transaction(aria-hidden="true")
+						| 53 **** 6780
+					td 13589066
+					td 5 000 грн
+					td 05.06.2019
+					td Выдача кредита
+					td
+						.active Успешно
+				tr
+					td
+						.card-icon
+							i.icon-fc-cross(aria-hidden="true")
+						| 53 **** 6780
+					td 13589066
+					td 5 000 грн
+					td 05.06.2019
+					td Выдача кредита
+					td
+						.inactive Отказано

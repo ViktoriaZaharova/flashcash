@@ -1,0 +1,175 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Адреса'
+	- var pageClass = ''
+	- var headName = 'Адреса'
+	- var currentPersonalMenu = 2
+
+block content
+	.user-name
+		| Имя Фамилия Отчество
+		i#edit-data.icon-fc-pencil(aria-hidden="true")
+	.user-id ID 106908
+	.data-block
+		.data-block-head
+			.icon
+				i.icon-fc-location(aria-hidden="true")
+			| Адрес проживания
+		.data-block-content
+			.flex-2em.child-col-md-6.child-col-sm-12.child-col-xs-12
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Страна:
+							.col
+								input(type="text" value="Украина" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Индекс:
+							.col
+								input(type="text" value="02215" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Область:
+							.col
+								input(type="text" value="Киевская" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Район:
+							.col
+								input(type="text" value="Васильковский" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Тип населенного пункта:
+							.col
+								input(type="text" value="Г." disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Название населенного пункта:
+							.col
+								input(type="text" value="Васильков" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Тип улицы:
+							.col
+								input(type="text" value="Улица" disabled="disabled")
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Название улицы:
+							.col
+								input(type="text" value="Джерельна" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Дом:
+							.col
+								input(type="text" value="27" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Корпус:
+							.col
+								input(type="text" value="1" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Квартира:
+							.col
+								input(type="text" value="67" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Форма собственности:
+							.col
+								input(type="text" value="Проживание с родственниками" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Срок проживания:
+							.col
+								input(type="text" value="3 года" disabled="disabled")
+	.data-block
+		.data-block-head
+			.icon
+				i.icon-fc-location(aria-hidden="true")
+			| Адрес регистрации
+		.data-block-content
+			.flex-2em.child-col-md-6.child-col-sm-12.child-col-xs-12
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Страна:
+							.col
+								input(type="text" value="Украина" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Индекс:
+							.col
+								input(type="text" value="02215" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Область:
+							.col
+								input(type="text" value="Киевская" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Район:
+							.col
+								input(type="text" value="Васильковский" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Тип населенного пункта:
+							.col
+								input(type="text" value="Г." disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Название населенного пункта:
+							.col
+								input(type="text" value="Васильков" disabled="disabled")
+				.col
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Тип улицы:
+							.col
+								input(type="text" value="Улица" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Название улицы:
+							.col
+								input(type="text" value="Джерельна" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Дом:
+							.col
+								input(type="text" value="27" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Корпус:
+							.col
+								input(type="text" value="1" disabled="disabled")
+					.form-group.input-effect.mini-input
+						.flex-1em.child-col-xs-12.child-col-sm-12.child-col-md-6.items-center
+							.col
+								label Квартира:
+							.col
+								input(type="text" value="67" disabled="disabled")

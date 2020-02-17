@@ -1,0 +1,30 @@
+extends template/main
+
+block variables
+	- var title = 'Оформление кредита'
+
+block content
+	.credit-registration-container(data-type="with-last-step")
+		script.
+			var creditFormButtons = {
+				save: 'Сохранить',
+				next: 'Продолжить',
+				previous: 'Назад',
+				finish: 'Оформить'
+			}
+		.container
+			h1.text-center.pt-2em.dark-blue Для оформления кредита - заполните анкету
+			.credit-steps-form
+				h3 1
+				section
+				h3 2
+				section
+				h3 3
+				section
+				h3 4
+				section
+				h3 5
+				section
+				h3 6
+				section
+					include modules/credit-form/step-6.pug

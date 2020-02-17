@@ -1,0 +1,38 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Документы'
+	- var pageClass = ''
+	- var headName = 'Документы'
+
+block content
+	.table-container
+		table.vertical-top
+			thead
+				tr
+					td.pt-0 Номер договора
+					td.pt-0.text-center Сумма
+					td.pt-0.text-center Дата
+					td.pt-0
+			tbody
+				- for (var i = 0; i < 4; ++i)
+					tr
+						td
+							.card-icon
+								i.icon-fc-mini-logo(aria-hidden="true")
+							a.link-black.link-border(href="#") Кредитный договор № КК - 12357800
+						td.text-center 5 000 грн
+						td.text-center 05.06.2019
+						td
+							.document.flex.item-center.space-between.nowrap
+								a.d-i-block.link-blue.link-border(href="#") Кредитный договор
+								a.download-icon.pl-1em(href="#")
+									i.icon-fc-download(aria-hidden="true")
+							.document.flex.item-center.space-between.nowrap
+								a.d-i-block.link-blue.link-border(href="#") Справка
+								a.download-icon.pl-1em(href="#")
+									i.icon-fc-download(aria-hidden="true")
+							.document.flex.item-center.space-between.nowrap
+								a.d-i-block.link-blue.link-border(href="#") Договор страхования
+								a.download-icon.pl-1em(href="#")
+									i.icon-fc-download(aria-hidden="true")

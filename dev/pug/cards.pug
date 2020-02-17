@@ -1,0 +1,55 @@
+extends template/personal
+
+block variables
+	- var title = 'Личный кабинет | Мои карты'
+	- var pageClass = ''
+	- var headName = 'Мои карты'
+	- var currentPersonalMenu = 3
+
+block content
+	.user-name
+		| Имя Фамилия Отчество
+		i#edit-data.icon-fc-pencil(aria-hidden="true")
+	.user-id ID 106908
+	.cards.table-container.mt-2em
+		table
+			thead
+				tr
+					td Номер карты
+					td.text-center Статус
+					td
+			tbody
+				tr
+					td
+						.card-icon
+							i.icon-fc-card(aria-hidden="true")
+						| 53 **** 6780
+					td.text-center
+						.active Активирована
+					td
+						.remove-icon
+							i.icon-fc-trash(aria-hidden="true")
+				tr
+					td
+						.card-icon
+							i.icon-fc-card(aria-hidden="true")
+						| 53 **** 6780
+					td.text-center
+						.active Активирована
+					td
+						.remove-icon
+							i.icon-fc-trash(aria-hidden="true")
+				tr
+					td
+						.card-icon
+							i.icon-fc-card(aria-hidden="true")
+						| 53 **** 6780
+					td.text-center
+						.inactive Неактивна
+					td
+						.remove-icon
+							i.icon-fc-trash(aria-hidden="true")
+	.text-right.mt-2em
+		button.btn-main.btn-orange.btn-medium(type="button")
+			i.icon-fc-add-card(aria-hidden="true")
+			| Добавить карту

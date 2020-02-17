@@ -1,0 +1,60 @@
+.stocks-item-container
+	padding-top: 5em
+	.stocks-item-container-inner
+		display: flex
+	.stok-item-content
+		padding-right: 4em
+		p
+			margin-bottom: 1em
+		h3
+			font-size: 1.25em
+			color: $orange
+			font-family: $montserrat-medium
+			margin-bottom: 1em
+	.stock-credit-form
+		.credit-calculate
+			padding: 0
+			.credit-calculate-timer
+				padding: 3em
+				background: $orange
+				h3
+					color: #ffffff
+					margin-bottom: 1em
+				.timer
+					display: flex
+					justify-content: space-between
+					margin-top: 0.5em
+					align-items: center
+					> span
+						font-size: 1.2em
+					.item
+						background: #ffffff
+						display: flex
+						align-items: center
+						justify-content: center
+						flex-direction: column
+						position: relative
+						@include size(81px, 58px)
+						color: $dark-blue
+						font-family: $montserrat-medium
+						span
+							display: block
+							font-size: 0.9em
+							&.value
+								font-size: 1.2em
+				.info
+					font-size: 11px
+					margin-top: 1em
+			.credit-calculate__inner
+				padding: 3em
+				.calendar-container .calendar-inner .info-block
+					flex-wrap: wrap
+					padding-left: 0
+					flex-direction: row
+				.calendar-container .calendar-inner .info-block > div
+					flex-basis: 33.3333%
+					width: 33.3333%
+				.calendar-container .calendar-inner
+					flex-direction: column
+				.calendar-container .calendar-inner .calendar
+					margin-bottom: 1em

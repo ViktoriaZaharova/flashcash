@@ -1,0 +1,32 @@
+div[class^="head-with-"]
+	h2
+		font-size: 2em
+		font-family: $montserrat-semibold
+		color: $dark-blue
+		text-align: center
+
+.head-with-color
+	background: #e5ebf0
+	h2
+		padding: 1.25em 0
+	&__document
+		background: #e5ebf0
+		padding: 2.5em 0
+		.heading
+			font-family: $montserrat-semibold
+			color: #3f505a
+			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
+			span
+				font-size: 2em
+				margin: 0 1em
+
+.head-with-image
+	background-image: url($base-image-path + $banner)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	h2
+		padding: 2.2em 0

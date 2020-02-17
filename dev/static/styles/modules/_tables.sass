@@ -1,0 +1,29 @@
+.table-container
+	overflow-x: auto
+table
+	width: 100%
+	thead
+		td
+			font-size: 1.1em
+			font-family: $montserrat-semibold
+			color: $dark-blue
+	td
+		padding: 0.5em 1em
+		white-space: nowrap
+		&:last-child
+			padding-right: 0
+		&:first-child
+			padding-left: 0
+		.active
+			color: $orange
+		.inactive
+			color: #e5ebf0
+		.card-icon
+			display: inline-block
+			vertical-align: middle
+			color: $dark-blue
+			font-size: 1.3em
+			margin-right: 0.5em
+	&.vertical-top
+		td
+			vertical-align: top

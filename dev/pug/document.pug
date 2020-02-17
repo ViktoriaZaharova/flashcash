@@ -1,0 +1,24 @@
+extends template/main
+
+block variables
+	- var title = 'Личный кабинет | Документ'
+	- var pageClass = ''
+
+block content
+	.head-with-color__document
+		.container
+			.heading
+				a.btn-main.btn-gray(href="#") Отказаться
+				span Кредиты
+				a.btn-main.btn-orange(href="#") Подписать
+	.pdf-viewer.pt-3em.pb-3em
+		.container
+			.message.bg-success.mb-2em Сообщение Сообщение Сообщение Сообщение Сообщение
+			#pdf-viewer.mb-2em
+			.text-right.document-actions
+				a.btn-main.btn-gray(href="#") Отказаться
+				a.btn-main.btn-orange(href="#") Подписать
+	block script
+		script(src="./static/js/libs/pdf/pdfobject.min.js")
+		script.
+			PDFObject.embed('/static/js/libs/pdf/sample-3pp.pdf', '#pdf-viewer');

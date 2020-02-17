@@ -1,0 +1,198 @@
+.credit-calculate-owl-container
+	position: absolute
+	z-index: 2
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	pointer-events: none
+	.container
+		height: 100%
+.credit-calculate
+	padding: 3rem
+	background: #ffffff
+	box-shadow: 0px 10px 21px rgba(29,29,27,0.38)
+	pointer-events: all
+	position: relative
+	&__label
+		position: absolute
+		right: 0
+		top: 1em
+		z-index: 2
+		background-color: $dark-blue
+		color: #ffffff
+		padding: 0.5rem 3rem 0.5rem 1rem
+	.credit-calculate__inner
+		.summ-slider
+			min-width: 300px
+			&.day-slider
+				margin-top: 1em
+				display: none
+				.value-block
+					.value
+						span
+							font-size: 1.2rem
+							color: #3f505a
+							padding: 0.2em
+							margin: 0 3px
+							border: 0
+							box-shadow: none
+			.range-info
+				display: flex
+				justify-content: space-between
+				margin-top: 1rem
+				.range-info__with-popup
+					position: relative
+					cursor: default
+					color: $dark-blue
+					border-bottom: 1px solid $dark-blue
+					.range-info__popup
+						position: absolute
+						width: 160px
+						right: 0
+						top: calc(100% + 5px)
+						padding: 1em
+						box-shadow: 0 2px 6px rgba(0, 0, 0, 0.24)
+						border-radius: 4px
+						z-index: -1
+						background-color: #fff
+						color: #72838f
+						opacity: 0
+						visibility: hidden
+						transition: opacity 250ms ease-in-out
+					&:hover
+						.range-info__popup
+							opacity: 1
+							visibility: visible
+							z-index: 2
+				> div
+					font-size: 0.7rem
+					> span
+						font-size: 0.9rem
+						margin-right: 3px
+						display: inline-block
+			.value-block
+				margin-bottom: 1.5rem
+				font-size: 0.9rem
+				.value
+					font-family: $montserrat-semibold
+					color: $dark-blue
+					font-size: 0.85rem
+					> input
+						font-size: 1.2rem
+						color: $dark-blue
+						border-radius: 5px
+						background: $light-blue2
+						padding: 0.2em
+						margin: 0 5px
+						border: 0
+						box-shadow: none
+						text-align: center
+						width: 62px
+			&.day-slider
+				.value-block
+					.value
+						> input
+							width: 26px
+		.calendar-container
+			.calendar-checked-date
+				margin: 1.3rem 0
+				> div
+					font-size: 0.85em
+				> span
+					font-size: 1.2rem
+					margin-left: 5px
+					font-family: $montserrat-semibold
+					color: $orange
+			.calendar-inner
+				display: flex
+				.calendar
+					background: $light-blue2
+					padding: 2rem
+					user-select: none
+					min-width: 380px
+					.month-name
+						text-align: center
+						color: $dark-blue
+						font-family: $montserrat-semibold
+					.calendar-row
+						display: flex
+						justify-content: space-between
+						.calendar-item
+							padding: 0.5rem 0
+							flex-basis: 14%
+							width: 14%
+							text-align: center
+							position: relative
+							z-index: 1
+							cursor: pointer
+							&:before
+								content: ''
+								background: transparent
+								position: absolute
+								top: 0
+								right: 0
+								left: 0
+								bottom: 0
+								z-index: -1
+								transform: skewX(-10deg)
+							&.inactive
+								color: $light-blue3
+							&.checked
+								cursor: default
+								&:before
+									background: $orange
+							&.inactive,
+							&.week-day
+								cursor: default
+								&:before
+									content: none
+				.info-block
+					padding-left: 1.3rem
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					> div
+						margin-bottom: 1.25rem
+					h5
+						font-size: 0.85rem
+						font-weight: normal
+					.value
+						font-family: $montserrat-semibold
+						color: $dark-blue
+						font-size: 0.85rem
+						> span
+							font-size: 1.2rem
+							margin-right: 5px
+					.descr
+						font-size: 0.65rem
+
+.rangeslider__handle__popup
+	position: absolute
+	width: 160px
+	font-size: 0.8em
+	left: 0
+	top: calc(100% + 10px)
+	padding: 0.75em
+	filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.24))
+	border-radius: 4px
+	background-color: #fff
+	color: #72838f
+	cursor: default
+	opacity: 0
+	visibility: hidden
+	z-index: -1
+	transition: opacity 250ms ease-in-out
+	&::before
+		content: ''
+		position: absolute
+		top: -2px
+		left: 13px
+		background: #ffffff
+		width: 1em
+		height: 1em
+		transform: rotate(45deg) translateZ(-1px)
+	&.show
+		opacity: 1
+		visibility: visible
+		z-index: 1

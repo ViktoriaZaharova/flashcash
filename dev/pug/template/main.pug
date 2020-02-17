@@ -1,0 +1,37 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=no")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css")
+		link(rel="stylesheet" type="text/css" href="static/css/styles.min.css")
+		block custom-styles
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body(class=pageClass)
+		.wrapper
+			include ../modules/header/header
+			.content
+				block content
+			include ../modules/footer/footer
+		script(src="./static/js/libs/jquery/jquery-3.3.1.min.js" type="text/javascript")
+		script(src="./static/js/main.min.js" type="text/javascript")
+		script(src="./static/js/libs/owl.carousel/owl.carousel.min.js" type="text/javascript")
+		script(src="./static/js/libs/materialize/materialize.min.js" type="text/javascript")
+		script(src="./static/js/libs/rangeslider/rangeslider.min.js" type="text/javascript")
+		script(src="./static/js/libs/jquery.steps/jquery.steps.min.js" type="text/javascript")
+		script(src="./static/js/libs/sweetalert/sweetalert2.min.js" type="text/javascript")
+		script(src="./static/js/libs/moment/moment.min.js" type="text/javascript")
+		script(src="./static/js/libs/daterangepicker/daterangepicker.js" type="text/javascript")
+		script(src="./static/js/libs/inputmask/jquery.inputmask.min.js" type="text/javascript")
+		block script

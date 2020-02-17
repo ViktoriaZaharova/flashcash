@@ -1,0 +1,54 @@
+extends template/main
+
+block variables
+	- var title = 'Личный кабинет | Документ'
+	- var pageClass = ''
+
+block content
+	.head-with-color
+		.container
+			h2 Кредиты
+	.close-credit.pb-3em
+		.container
+			.close-credit__container
+				.flex-2em.child-col-md-6.child-col-xs-12.child-col-sm-12
+					div
+						h5 Погасить кредит
+						table
+							tr
+								td Тело кредита
+								td 620.00
+							tr
+								td Проценты
+								td 20.00
+							tr
+								td Комиссия
+								td 0.00
+						.close-credit__action
+							div
+								button.btn-main.btn-orange.with-custom-tooltip(type="submit")
+									| Погасить
+									.custom-tooltip Вы можете погасить свой кредит полностью и получить новый кредит по новым условиям. Если у вас недостаточно срество вы можете погасить кредит частично.
+							.form-group
+								input(type="number" name="" value="620")
+								span.currency грн.
+					div
+						h5 Пролонгировать кредит
+						table
+							tr
+								td Тело кредита
+								td 0.00
+							tr
+								td Проценты
+								td 20.00
+							tr
+								td Комиссия
+								td 0.00
+						.close-credit__action
+							div
+								button.btn-main.btn-orange.with-custom-tooltip(type="submit")
+									| Погасить
+									.custom-tooltip  У вас есть уникальная возможность пролонигровать кредит на выгодных условиях, обезопасив себя от дополнительных комиссий.
+							.form-group
+								input(type="number" name="" value="620" disabled="disabled")
+								span.currency грн.

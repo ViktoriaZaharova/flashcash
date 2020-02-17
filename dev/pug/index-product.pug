@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+	- var title = 'FlashCash'
+	- var pageClass = 'index-page'
+
+block content
+	include ./modules/approved-bubble
+	include ./modules/index/calculate-section
+	include ./modules/index/4
+	include ./modules/index/product-tabs

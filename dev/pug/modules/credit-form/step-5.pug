@@ -1,0 +1,58 @@
+h2 Данные о доходах
+.two-columns
+	.column
+		.form-group
+			.select.full
+				select(name="date" required="required")
+					option(disabled selected value) Получали кредит в течении последних пяти лет
+					option 13
+					option 14
+					option 15
+				.select__arrow
+					i.icon-fc-angle-down
+				span.error-text Выберите
+		.form-group.input-effect
+			input(type="text", placeholder="")
+			label Ежемесячный платеж по поточным кредитам
+			span.focus-border
+			span.error-text Заполните поле
+		.form-group.input-effect
+			input(type="text", placeholder="")
+			label Сумма основного дохода
+			span.focus-border
+			span.error-text Заполните поле
+	.column
+		.form-group
+			.select.full
+				select(name="date" required="required")
+					option(disabled selected value) Частота выплат дохода
+					option 13
+					option 14
+					option 15
+				.select__arrow
+					i.icon-fc-angle-down
+				span.error-text Выберите
+		div.mb-10 Дата следующей выплаты дохода
+		.form-group
+			.select
+				select
+					option(disabled selected value) Дата
+					option 1
+					option 2
+				.select__arrow
+					i.icon-fc-angle-down
+			.select
+				select
+					option(disabled selected value) Месяц
+					option 1
+					option 2
+				.select__arrow
+					i.icon-fc-angle-down
+			.select
+				select
+					option(disabled selected value) Год
+					option 1
+					option 2
+				.select__arrow
+					i.icon-fc-angle-down
+			span.error-text Введите данные

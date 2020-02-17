@@ -1,0 +1,71 @@
+.credit-calculate
+	script.
+		var creditDatas = {
+			dailyRate: 1.7 / 100,
+			commission: 17 / 100
+		}
+	.credit-calculate__inner
+		.credit-calculate__label Заявка на кредит
+		.summ-slider
+			.value-block
+				| Сумма кредита
+				span.value
+					.input-buffer
+					input(type="text" value="2 000")
+					| грн
+			.slider-max-disabled
+				.true-slider(style="-webkit-flex-basis: 50%; -ms-flex-preferred-size: 50%; flex-basis: 50%;")
+					input#range-credit-summ.max-disabled(type="range" min="1000" max="3000" step="1000" value="2000")
+				.fake-slider(style="-webkit-flex-basis: 50%; -ms-flex-preferred-size: 50%; flex-basis: 50%;")
+			.range-info
+				.from
+					span 1 000
+					| грн
+				.to
+					span 3 000
+					| грн
+		.summ-slider.day-slider
+			.value-block
+				| Срок займа
+				span.value
+					.input-buffer
+					input(type="text" value="14")
+					| дней
+			input#range-credit-days(type="range" min="7" max="60" step="1" value="14")
+			.range-info
+				.from
+					span 7
+					| дней
+				.to
+					span 60
+					| дней
+		.calendar-container
+			.calendar-checked-date
+				.d-i-block Заплатить до
+				span
+			.calendar-inner
+				.calendar#calendar
+				.info-block
+					.info-block__summ
+						h5 Сумма
+						.value
+							span 2 000
+							| грн
+					.info-block__commission
+						h5 Комиссия
+						.value
+							span
+							| грн
+					.info-block__rate
+						h5 Ставка
+						.value
+							span 1
+							| % в день
+					.info-block__payment
+						h5 Всего к оплате
+						.value
+							span
+							| грн
+					button.btn-main.btn-orange.btn-medium(type="submit")
+						span.desktop Подтвердить
+						span.mobile подать заявку

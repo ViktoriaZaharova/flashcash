@@ -1,0 +1,70 @@
+.question-answer-section
+	.container
+		position: relative
+	.question-answer-navigation
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 2em
+		background: $orange
+		width: 330px
+		padding: 3em
+		ul
+			li
+				&:not(:last-child)
+					margin-bottom: 1em
+				a
+					color: #ffffff
+					font-size: 18px
+					transition: color 200ms linear
+					&:hover
+						color: #000000
+						text-decoration: none
+	.question-answer-block
+		h2
+			padding-right: 400px
+		.question-answer-item
+			margin-bottom: 1em
+			&.opened
+				.description
+					color: $orange
+					&:before
+						color: $orange
+			.description
+				margin-bottom: 1em
+				font-size: 1.05em
+				font-family: $montserrat-medium
+				margin-bottom: 1em
+				display: flex
+				align-items: flex-start
+				padding-right: 400px
+				span
+					padding-top: 0.25em
+					cursor: pointer
+					&:hover
+						text-decoration: underline
+				&:before
+					content: "\e901"
+					font-family: 'FlashCash' !important
+					speak: none
+					font-style: normal
+					font-weight: normal
+					font-variant: normal
+					text-transform: none
+					line-height: 1
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale
+					font-size: 1.5em
+					display: inline-block
+					vertical-align: middle
+					color: $dark-blue
+					margin-right: 10px
+			.answer-content
+				background: $light-blue2
+				padding: 2em 0
+				display: none
+				p:not(:last-child)
+					margin-bottom: 0.5em
+				.answer-content-inner
+					padding-left: 23px
+					padding-right: 400px

@@ -1,0 +1,125 @@
+extends template/main
+
+block variables
+	- var title = 'Акции'
+	- var pageClass = ''
+
+block content
+	- var headName = 'Акции'
+	include ./modules/head-with-image
+	.stocks-item-container
+		.container
+			.stocks-item-container-inner
+				.stok-item-content
+					h1.semibold.size-2em.dark-blue.mb-1em Акция “Комиссия 0% за первый месяц займа”
+					h3 Самое выгодное предложение от FlashCash, беспрецедентная акция на рынке МФО Украины.
+					p Компания FlashCash не прекращает радовать своих клиентов. Мы знаем, насколько полезной для многих оказалась наша социальная программа #flashcash, поэтому даем возможность новым клиентам также подключится к ней. Условия просты: займы без % на протяжении 3 месяцев. Берёте займ и возвращаете только то, что получили на карту. Никаких комиссий, переплат и процентов.
+					p Наша компания – лидер в сфере микрокредитования. Нам важно становится лучше и предлагать своим клиентам самые удобные условия займа. Именно поэтому в рамках проекта #FlashCash мы запускаем акцию “Все займы – бесплатно”. Все новые клиенты FlashCash могут использовать займ 92 дня совершенно бесплатно.
+					p.semibold Преимущества для клиента очевидны:
+					p - никаких процентов;
+						br
+						| - возможность поднять свой кредитный рейтинг;
+						br
+						| - возможность улучшить свою кредитную историю.
+					p И на десерт – мы предлагаем не только 92 беспроцентных дня, а и безлимит на количество займов.
+					p.semibold Условия акции:
+					p - Быть новым клиентом компании.
+						br
+						| - Зарегистрироваться на оформление первого займа на нашем сайте.
+						br
+						| - Выбрать вариант использования займа: 3 раза (по 30 дней); 6 раз (по 14) и 12 раз (по 7).
+						br
+						| - Подать заявку на сумму, которая вам необходима.
+						br
+						| - Добор свободных средств также происходит под 0%.
+					p.semibold Успейте воспользоваться уникальным предложением!
+					button.btn-main.btn-orange.mt-3em(type="/stock.html") Назад к акциям
+				.stock-credit-form
+					.credit-calculate
+						.credit-calculate-timer
+							h3.semibold.size-1_2em Стань новым клиентом и получи все займы бесплатно!
+							p.size-0_9em До конца акции осталось:
+							.timer
+								.item
+									span.value 50
+									span дней
+								span :
+								.item
+									span.value 50
+									span часов
+								span :
+								.item
+									span.value 50
+									span минут
+								span :
+								.item
+									span.value 50
+									span секунд
+							.info
+								| Акция распространяется только на новых клиентов.
+								div
+									a.dark-a-bordered-white(href="#") Полные условия акции
+						.credit-calculate__inner
+							.summ-slider
+								.value-block
+									| Сумма кредита
+									span.value
+										.input-buffer
+										input(type="text" value="5 000")
+										| грн
+								input#range-credit-summ(type="range" min="1000" max="10000" step="1000" value="5000")
+								.range-info
+									.from
+										span 1 000
+										| грн
+									.to
+										span 10 000
+										| грн
+							.calendar-container
+								.calendar-checked-date
+									.d-i-block.up.semibold Заплатить до
+									span
+								.calendar-inner
+									.calendar#calendar
+									.info-block
+										.info-block__summ
+											h5.up.semibold Сумма
+											.value
+												span 5 000
+												| грн
+										.info-block__commission
+											h5 Комиссия
+											.value.c-orange
+												span 0
+												| грн
+											.descr кредитная ставка 1%
+										.info-block__payment
+											h5.up.semibold Оплата
+											.value
+												span 5 000
+												| грн
+									.text-center
+										button.btn-main.btn-orange(type="button")
+											span.desktop Подтвердить
+											span.mobile подать заявку
+	.all-stocks-container
+		.container
+			.flex-2em.child-col-sm-6.child-col-md-4.child-col-xs-12
+				.col
+					.all-stocks-item
+						a.img(href="/stock-item.html")
+							img(src="./static/images/png/im_1.png" alt="")
+						a.descr(href="/stock-item.html") Акция “Комиссия 0% за первый месяц займа”
+						.date 04.06.2019
+				.col
+					.all-stocks-item
+						a.img(href="/stock-item.html")
+							img(src="./static/images/png/im_2.png" alt="")
+						a.descr(href="/stock-item.html") Новая акция “ - 50 % на повторный кредит”. Успей взять редит!
+						.date 04.06.2019
+				.col
+					.all-stocks-item
+						a.img(href="/stock-item.html")
+							img(src="./static/images/png/im_3.png" alt="")
+						a.descr(href="/stock-item.html") Розыгрыш 1 000 000 грн, а также 1 000 грн ежедневно! Успей принять участие.
+						.date 04.06.2019
